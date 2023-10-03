@@ -4,16 +4,9 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
 
-
-
 @NgModule({
-  declarations: [
-    FooterComponent,
-    HeaderComponent,
-    NavbarComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+  declarations: [FooterComponent, HeaderComponent, NavbarComponent],
+  imports: [CommonModule],
+  exports: [FooterComponent, HeaderComponent, NavbarComponent],
 })
-export class SharedModule { }
+export class SharedModule {}
