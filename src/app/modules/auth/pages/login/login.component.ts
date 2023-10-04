@@ -30,8 +30,14 @@ export class LoginComponent {
       Object.values(this.loginForm.controls).forEach((control) => {
         control.markAsTouched();
       });
+      return;
     }
-    console.log(this.loginForm.value);
+
+    const userData = this.authService
+      .login(this.loginForm.value)
+      .subscribe((response) => {
+        console.log(response);
+      });
   }
 
   public get f(): any {
