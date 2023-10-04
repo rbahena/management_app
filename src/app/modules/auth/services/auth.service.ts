@@ -14,7 +14,8 @@ export class AuthService {
   CONTROLLER = 'users';
 
   login(loginUserDto: LoginUserDto): Observable<any> {
-    const urlCompleted = `${(this.URL_API, this.CONTROLLER)}`;
+    const METHOD = 'login'
+    const urlCompleted = `${(this.URL_API)}/${(this.CONTROLLER)}/${(METHOD)}`;
     console.log(urlCompleted);
     return this.httpService
       .post<any>(urlCompleted, loginUserDto)
