@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent {
   constructor(
     private authService: AuthService,
-    private formBuild: FormBuilder
+    private formBuild: FormBuilder,
+    private router: Router
   ) {}
 
   public loginForm!: FormGroup;
@@ -33,11 +35,15 @@ export class LoginComponent {
       return;
     }
 
-    const userData = this.authService
-      .login(this.loginForm.value)
-      .subscribe((response) => {
-        console.log(response);
-      });
+    const userData = this.authService.login(this.loginForm.value).subscribe({
+      next: (response) => {
+        this.router.navigate(['/panel-trabajo']);
+      },
+      error: (error) => {
+        alert(error);
+      },
+      complete: () => console.log('done'),
+    });
   }
 
   public get f(): any {
