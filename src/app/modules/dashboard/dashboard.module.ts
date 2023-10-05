@@ -9,8 +9,8 @@ import { AlmacenComponent } from './components/almacen/almacen.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 
 @NgModule({
-  declarations: [SidebarComponent, InventaryComponent, EntradasComponent, SalidasComponent, AlmacenComponent],
-  imports: [CommonModule, SharedModule, DashboardRoutingModule],
+  declarations: [SidebarComponent, InventaryComponent, EntradasComponent, SalidasComponent,AlmacenComponent],
+  imports: [CommonModule, DashboardRoutingModule],
   exports:[EntradasComponent, SalidasComponent, AlmacenComponent]
 
 })
