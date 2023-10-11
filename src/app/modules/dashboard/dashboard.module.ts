@@ -7,9 +7,10 @@ import { EntradasComponent } from './components/entradas/entradas.component';
 import { SalidasComponent } from './components/salidas/salidas.component';
 import { AlmacenComponent } from './components/almacen/almacen.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { InicioComponent } from './pages/inicio/inicio.component';
 
 @NgModule({
-  declarations: [SidebarComponent, InventaryComponent, EntradasComponent, SalidasComponent,AlmacenComponent],
+  declarations: [SidebarComponent, InventaryComponent, EntradasComponent, SalidasComponent,AlmacenComponent, InicioComponent],
   imports: [CommonModule, DashboardRoutingModule],
   exports:[EntradasComponent, SalidasComponent, AlmacenComponent]
 

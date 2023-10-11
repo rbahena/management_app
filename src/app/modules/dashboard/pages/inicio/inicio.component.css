@@ -1,0 +1,12 @@
+.main-bar{
+    background-color: #ffc10a;
+    height: 45px;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.inicio{
+    margin-left: 3rem;
+}
